@@ -382,14 +382,14 @@ Our best model (XGBoost with engineered features) achieved:
 
 ### Detailed Model Performance Comparison
 
-[table](img/table.png)
+![table](img/table.png)
 
 Key findings:
 - Tree-based models significantly outperformed linear models, with R² improving from around 0.62 to 0.74
 - The stacking ensemble did not improve upon the performance of the best individual model (XGBoost), suggesting that XGBoost already captures most of the predictive patterns
 - XGBoost achieved the best overall performance with an R² of 0.739
 
-[xgboost](img/download.png) 
+![xgboost](img/download.png) 
 
 ### Feature Importance Analysis
 
