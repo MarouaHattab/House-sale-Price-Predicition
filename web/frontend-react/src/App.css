@@ -1,0 +1,287 @@
+/* App.css - Enhanced Styling for Real Estate Predictor */
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Theme styles */
+.light-theme {
+  --bg-color: #f5f9ff;
+  --card-bg: #ffffff;
+  --header-color: #1565C0;
+  --text-color: #333333;
+  --secondary-color: #0D47A1;
+  --progress-bg: #e3f2fd;
+  --progress-fill: #1976D2;
+  --card-border: #e0e0e0;
+  --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --header-color: #90caf9;
+  --text-color: #e0e0e0;
+  --secondary-color: #bb86fc;
+  --progress-bg: rgba(255, 255, 255, 0.1);
+  --progress-fill: #bb86fc;
+  --card-border: #333333;
+  --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Card styles */
+.light-card {
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  color: var(--text-color);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.dark-card {
+  background: linear-gradient(to bottom, #1e1e1e, #262626);
+  color: var(--text-color);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+/* Header styles */
+.light-header {
+  color: var(--header-color);
+  font-weight: bold;
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.light-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--header-color);
+  border-radius: 3px;
+}
+
+.dark-header {
+  color: var(--header-color);
+  font-weight: bold;
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.dark-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--header-color);
+  border-radius: 3px;
+}
+
+/* Form card enhancements */
+.property-form-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.property-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), transparent);
+  border-radius: 0 0 0 100%;
+  z-index: 0;
+}
+
+/* Results card enhancements */
+.results-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.results-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(315deg, rgba(33, 150, 243, 0.1), transparent);
+  border-radius: 0 100% 0 0;
+  z-index: 0;
+}
+
+/* Prediction card animation */
+.prediction-card {
+  animation: pulseShadow 3s infinite;
+}
+
+@keyframes pulseShadow {
+  0% {
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.1);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(25, 118, 210, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.1);
+  }
+}
+
+/* Summary card hover effects */
+.summary-card {
+  transition: all 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hover-shadow);
+}
+
+/* Factor chips hover effect */
+.factor-chip {
+  transition: all 0.3s ease;
+}
+
+.factor-chip:hover {
+  transform: scale(1.05);
+}
+
+/* Impact progress bars */
+.impact-container .impact-progress {
+  transition: all 0.5s ease;
+}
+
+.impact-container .impact-progress:hover {
+  height: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Price range cards animation */
+.price-range-card {
+  transition: all 0.3s ease;
+}
+
+.price-range-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hover-shadow);
+}
+
+/* Button enhancements */
+.predict-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 12px;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.predict-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+  rgba(255, 255, 255, 0),
+  rgba(255, 255, 255, 0.2),
+  rgba(255, 255, 255, 0));
+  transition: all 0.5s ease;
+}
+
+.predict-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.predict-button:hover::after {
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Property types info card */
+.property-types-info {
+  transition: all 0.3s ease;
+}
+
+.property-types-info:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .light-card, .dark-card {
+    padding: 16px;
+  }
+
+  .light-header, .dark-header {
+    font-size: 1.2rem;
+  }
+
+  .prediction-card {
+    padding: 16px !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--progress-bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--progress-fill);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Dark mode for body - applied directly */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
